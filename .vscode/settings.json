@@ -1,0 +1,18 @@
+{
+  "cSpell.disableFiletypes": ["verilog", "systemverilog", "makefile"],
+  "cSpell.diagnosticLevel": "Hint",
+
+  "editor.unicodeHighlight.nonBasicASCII": false,
+
+  "verilog.linting.enabled": true,
+  "verilog.linting.linter": "iverilog",
+  "verilog.linting.run": "onType",
+
+  // 1) absolute path to Icarus
+  "verilog.iverilog.path": "C:\\msys64\\mingw64\\bin\\iverilog.exe",
+
+  // 2) IMPORTANT: search dirs for missing modules (add/remove to match your folders)
+  // keep ${workspaceFolder}; add rtl/, tb/, examples/ if you use them
+  "verilog.iverilog.arguments": "-g2012 -Wall -y ${workspaceFolder} -y ${workspaceFolder}/rtl -y ${workspaceFolder}/tb -y ${workspaceFolder}/examples +libext+.v+.sv",
+  "verilog.linting.iverilog.arguments": "-g2012 -Wall -y ${workspaceFolder} -y ${workspaceFolder}/rtl -y ${workspaceFolder}/tb -y ${workspaceFolder}/examples +libext+.v+.sv"
+}

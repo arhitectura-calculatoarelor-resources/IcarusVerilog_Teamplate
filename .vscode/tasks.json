@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Simulate (make wave)",
+      "type": "process",
+      "command": "C:\\msys64\\usr\\bin\\bash.exe",
+      "args": [
+        "-lc",
+        "MSYSTEM=MINGW64 CHERE_INVOKING=1 source /etc/profile; \\make -C \"$(cygpath -u '${workspaceFolder}')\" wave ACTIVE=\"$(cygpath -u '${file}')\""
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}
